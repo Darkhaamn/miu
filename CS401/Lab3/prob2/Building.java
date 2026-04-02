@@ -7,9 +7,10 @@ public class Building {
     private double maintenanceCost;
     private List<Apartment> apartments;
 
-    public Building(double maintenanceCost) {
+    public Building(double maintenanceCost, double initialAptRent) {
         this.maintenanceCost = maintenanceCost;
         apartments = new ArrayList<>();
+        apartments.add(new Apartment(initialAptRent));
     }
 
     public void addApartment(Apartment newApartment) {

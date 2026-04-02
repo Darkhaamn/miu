@@ -1,5 +1,4 @@
 package lesson3.labs.prob2;
-import java.util.*;
 
 public class Main {
 
@@ -22,10 +21,10 @@ public class Main {
 		};
 
 		Building[] bldgs = {
-				new Building(150),
-				new Building(175),
-				new Building(150),
-				new Building(175)
+				new Building(150, 400),
+				new Building(175, 900),
+				new Building(150, 300),
+				new Building(175, 775)
 		};
 
 		for(Apartment a : apts0) {
