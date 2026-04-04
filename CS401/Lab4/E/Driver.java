@@ -5,20 +5,30 @@ import java.util.List;
 
 public class Driver {
     void main() {
-        Employee e1 = new Employee("Alice");
-        e1.addAccount(new CheckingAccount("C100", 25.0, 1000.0));
-        e1.addAccount(new SavingAccount("S100", 0.05, 2000.0));
+       // Uncomment when you are ready to test your code
+		Account[] someCheckingAccounts = new CheckingAccount[2];
+		someCheckingAccounts[0] = new CheckingAccount("231-471", 25.00, 100);
+		someCheckingAccounts[1] = new CheckingAccount("446-973", 25.00, 200);
+		Account[] someSavingsAccounts = new SavingAccount[3];
+		someSavingsAccounts[0] = new SavingAccount("44-8123", 0.03, 200);
+		someSavingsAccounts[1] = new SavingAccount("21-9672", 0.03, 200);
+		someSavingsAccounts[2] = new SavingAccount("68-0902", 0.04, 600);
 
-        Employee e2 = new Employee("Bob");
-        e2.addAccount(new CheckingAccount("C200", 10.0, 500.0));
-        e2.addAccount(new SavingAccount("S200", 0.10, 1500.0));
-        e2.addAccount(new SavingAccount("S201", 0.04, 1000.0));
+		Employee e1 = new Employee("Joe");
+		Employee e2 = new Employee("Ralph");
+		Employee e3 = new Employee("Tom");
 
-        List<Employee> employees = new ArrayList<>();
-        employees.add(e1);
-        employees.add(e2);
+        e1.addAccount(someCheckingAccounts[0]);
+        e1.addAccount(someSavingsAccounts[0]);
+        e2.addAccount(someCheckingAccounts[1]);
+        e2.addAccount(someSavingsAccounts[1]);
+        e3.addAccount(someSavingsAccounts[2]);
 
-        double total = Admin.computeUpdatedBalanceSum(employees);
-        System.out.println("Total updated balance sum = " + total);
+		List<Employee> employees = new ArrayList<>();
+		employees.add(e1);
+		employees.add(e2);
+		employees.add(e3);
+
+		System.out.println(Admin.computeUpdatedBalanceSum(employees));
     }
 }
