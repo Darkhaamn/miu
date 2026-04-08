@@ -1,5 +1,8 @@
 # Lab7 #
 
+### ERD Diagram
+![ER Diagram](diagram.png)
+
 ~~~~sql
 CREATE TABLE Address (
  address_id INT PRIMARY KEY,
